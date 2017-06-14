@@ -1,0 +1,86 @@
+<!doc type html>
+<html>
+
+    <head>
+        <title> Jose Truax</title>
+        <link href="app.css" rel="stylesheet"/>
+    </head>
+    <body>
+        
+        <header>
+
+        <img src="images/image2.jpg"/>
+
+            <h1>Visit This Awesome Site</h1>
+        </header>
+
+        <h2 class="title">I claim this website for all TrES-2b</h2>
+
+            <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+ <p> Register for our newsletter</p>
+        <script>
+            function lettersOnly(input) {
+                var regex = /[^a-z]/gi;
+                input.value = input.value.replace(regex, "");
+            }
+        </script>
+            <input id="firstname" placeholder="first name" onkeyup="lettersOnly (this)">
+            <input id="lastname" placeholder="last name" onkeyup="lettersOnly (this)">
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+        <section>
+
+        <article>
+        <aside>
+            <h2>Things to Do</h2>
+            <ol id="orderedlist">
+            <ul>
+                <li>Feed the Marmots</li>
+                <li>Nyan the Cat</li>
+                <li>Pet the Mimikatz</li>
+                <li>Drink Pineapple Juice</li>
+                <li>Jazaga the Katana</li>
+                <li><a href="https://www.bing.com/search?q=periodical%20cicadas&qs=n&form=QBRE&sp=-1&pq=periodica%20cicadas&sc=0-17&sk=&cvid=0924FBB95B374B139C5D27455ACB9600">Clicketh me Please!</a></li>
+            </ol>
+            </ul>
+            <h2>The List!</h2>
+            <p>“The sky above the port was the color of television, tuned to a dead channel.” </p>
+            <p>― William Gibson, Neuromancer</p>
+            <p>“Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts... A graphic representation of data abstracted from banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the nonspace of the mind, clusters and constellations of data. Like city lights, receding...” </p>
+            <p>― William Gibson, Neuromancer</p>
+
+            <p>How to get here</p>
+            <p>Take a left on ./BASH road right next to the wall of sheep pub and heartbleed hotel in the POODLE district.</p>
+            <p>by boat.</p>
+           
+
+        </aside>
+        </article>
+        </section>
+        
+        <footer>
+            Copyright © 1939
+        </footer>
+
+    </body>
+
+</html>
